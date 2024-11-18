@@ -22,7 +22,7 @@ const Homepage = () => {
   // get-all-category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/category");
+      const { data } = await axios.get("https://er-mart-backend.onrender.com/category");
       if (data?.success) {
         setCategories(data?.category);
       } else {
@@ -43,7 +43,7 @@ const Homepage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8000/product-list/${page}`
+        `https://er-mart-backend.onrender.com/product-list/${page}`
       );
       setLoading(false);
       setProducts(data.products);
@@ -56,7 +56,7 @@ const Homepage = () => {
   //get product's count
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/product-count");
+      const { data } = await axios.get("https://er-mart-backend.onrender.com/product-count");
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -73,7 +73,7 @@ const Homepage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8000/product-list/${page}`
+        `https://er-mart-backend.onrender.com/product-list/${page}`
       );
       setLoading(false);
       setProducts([...products, ...data?.products]);
@@ -106,7 +106,7 @@ const Homepage = () => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/product-filters",
+        "https://er-mart-backend.onrender.com/product-filters",
         {
           checked,
           radio,
@@ -159,7 +159,7 @@ const Homepage = () => {
             {products?.map((p) => (
               <div key={p._id} className="product-card card m-2" style={{ width: "18rem" }}>
                 <img
-                  src={`http://localhost:8000/get-photo/${p._id}`}
+                  src={`https://er-mart-backend.onrender.com/get-photo/${p._id}`}
                   className="card-img-top product-image"
                   alt={p.name}
                 />
