@@ -20,7 +20,7 @@ const ProductDetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/get-single-product/${params.slug}`
+        `https://er-mart-backend.onrender.com/get-single-product/${params.slug}`
       );
       setProduct(data?.product);
       getSimilarProduct(data?.product._id, data?.product.category._id);
@@ -33,7 +33,7 @@ const ProductDetails = () => {
   const getSimilarProduct = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/related-product/${pid}/${cid}`
+        `https://er-mart-backend.onrender.com/related-product/${pid}/${cid}`
       );
       setRelatedProducts(data?.products);
     } catch (error) {
@@ -45,7 +45,7 @@ const ProductDetails = () => {
       <div className="row container mt-2">
         <div className="col-md-6">
           <img
-            src={`http://localhost:8000/get-photo/${product._id}`}
+            src={`https://er-mart-backend.onrender.com/get-photo/${product._id}`}
             className="card-img-top"
             alt={product.name}
             width={"100px"}
@@ -80,7 +80,7 @@ const ProductDetails = () => {
           {relatedProducts?.map((p) => (
             <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
               <img
-                src={`http://localhost:8000/get-photo/${p?._id}`}
+                src={`https://er-mart-backend.onrender.com/get-photo/${p?._id}`}
                 className="card-img-top"
                 alt={p.name}
               />
