@@ -11,7 +11,7 @@ const AdminRoute = () => {
   useEffect(() => {
     const authCheck = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/admin-dashboard", {
+        const res = await axios.get("https://er-mart-backend.onrender.com/admin-dashboard", {
           headers: {
             Authorization: `Bearer ${auth.token}`, // Include token in header
           },
