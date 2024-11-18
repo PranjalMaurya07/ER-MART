@@ -17,7 +17,7 @@ const CategoryProduct = () => {
   const getProductsByCat = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/product-category/${params.slug}`
+        `https://er-mart-backend.onrender.com/product-category/${params.slug}`
       );
       setProducts(data.products);
       setCategory(data.category);
@@ -41,7 +41,7 @@ const CategoryProduct = () => {
                   key={p._id}
                 >
                   <img
-                    src={`http://localhost:8000/get-photo/${p._id}`}
+                    src={`https://er-mart-backend.onrender.com/get-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                   />
