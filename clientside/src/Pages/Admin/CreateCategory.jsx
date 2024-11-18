@@ -16,7 +16,7 @@ const CreateCategory = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const data = await axios.post("http://localhost:8000/create-category", {
+      const data = await axios.post("https://er-mart-backend.onrender.com/create-category", {
         name,
       });
       if (data.data.success) {
@@ -33,7 +33,7 @@ const CreateCategory = () => {
 
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/category");
+      const { data } = await axios.get("https://er-mart-backend.onrender.com/category");
       if (data.success) {
         setCategories(data.category); 
       } else {
@@ -53,7 +53,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        `http://localhost:8000/update-category/${selected._id}`,
+        `https://er-mart-backend.onrender.com/update-category/${selected._id}`,
         { name: updatedName }
       );
       if (data.success) {
@@ -73,7 +73,7 @@ const CreateCategory = () => {
   const handleDelete = async (pId) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:8000/delete-category/${pId}`
+        `https://er-mart-backend.onrender.com/delete-category/${pId}`
       );
       if (data.success) {
         toast.success(`Category deleted successfully`);
