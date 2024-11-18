@@ -11,7 +11,7 @@ const Protected = () => {
   useEffect(() => {
     const authCheck = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/user-dashboard", {
+        const res = await axios.get("https://er-mart-backend.onrender.com/user-dashboard", {
           headers: {
             Authorization: `Bearer ${auth?.token}`, // Pass token in headers for auth
           },
