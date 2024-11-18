@@ -21,7 +21,7 @@ const CreateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/category");
+      const { data } = await axios.get("https://er-mart-backend.onrender.com/category");
       if (data.success) {
         setCategories(data.category);
       } else {
