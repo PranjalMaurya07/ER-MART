@@ -10,7 +10,7 @@ const Products = () => {
 
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/get-products");
+      const { data } = await axios.get("https://er-mart-backend.onrender.com/get-products");
       setProducts(data.products);
     } catch (error) {
       console.log(error);
@@ -39,7 +39,7 @@ const Products = () => {
               >
                 <div className="card m-2" style={{ width: "18rem" }}>
                   <img
-                    src={`http://localhost:8000/get-photo/${p._id}`}
+                    src={`https://er-mart-backend.onrender.com/get-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                   />
