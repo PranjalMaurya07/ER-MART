@@ -31,7 +31,7 @@ const Profile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put("http://localhost:8000/profile", {
+      const { data } = await axios.put("https://er-mart-backend.onrender.com/profile", {
         name,
         email,
         password,
