@@ -23,7 +23,7 @@ const Search = () => {
             {values?.results.map((p) => (
               <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
                 <img
-                  src={`http://localhost:8000/get-photo/${p._id}`}
+                  src={`https://er-mart-backend.onrender.com/get-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                 />
