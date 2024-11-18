@@ -16,7 +16,7 @@ const ForgetPasssword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/forgetpassword", {
+      const res = await axios.post("https://er-mart-backend.onrender.com/forgetpassword", {
         email,
         newPassword,
         answer,
