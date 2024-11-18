@@ -47,7 +47,7 @@ const CartPage = () => {
   //get payment gateway token
   const getToken = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/braintree/token");
+      const { data } = await axios.get("https://er-mart-backend.onrender.com/braintree/token");
       setClientToken(data?.clientToken);
     } catch (error) {
       console.log(error);
@@ -63,7 +63,7 @@ const CartPage = () => {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
       const { data } = await axios.post(
-        "http://localhost:8000/braintree/payment",
+        "https://er-mart-backend.onrender.com/braintree/payment",
         {
           nonce,
           cart,
@@ -103,7 +103,7 @@ const CartPage = () => {
               <div className="row mb-2 p-3 card flex-row" key={p._id}>
                 <div className="col-md-4">
                   <img
-                    src={`http://localhost:8000/get-photo/${p._id}`}
+                    src={`https://er-mart-backend.onrender.com/get-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                     width="70px"
