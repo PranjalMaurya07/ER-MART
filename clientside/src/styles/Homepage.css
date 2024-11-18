@@ -1,0 +1,175 @@
+/* Homepage.css */
+
+
+
+/* Container Styling */
+.homepage-container {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* Filter Section */
+.filter-section {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.filter-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.category-filter,
+.price-filter,
+.reset-button {
+  margin-bottom: 20px;
+}
+
+.reset-button button {
+  width: 100%;
+  font-weight: bold;
+}
+
+/* Products Section */
+.products-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: flex-start;
+}
+
+/* Product Card */
+.product-card {
+  flex: 1 1 calc(33.33% - 20px); /* 3 cards in a row with space */
+  max-width: calc(33.33% - 20px); /* Same max width as flex */
+  height: 450px; /* Fixed height for uniformity */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: #fff; /* Optional: Background color */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  flex: 0 0 60%; /* 60% of the height */
+  object-fit: cover; /* Ensures image doesn't distort */
+  width: 100%;
+  height: 100%;
+}
+
+/* Product card body */
+.product-body {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.product-price {
+  /* font-size: 16px; */
+  color: #28a745;
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-buttons .btnn {
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn1 {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn2 {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+/* Load More Button */
+.load-more-btn button {
+  width: 200px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .homepage-container {
+    flex-direction: column;
+  }
+
+  .filter-section {
+    margin-bottom: 20px;
+  }
+
+  .product-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards in a row */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-title,
+  .page-title {
+    font-size: 20px;
+  }
+
+  .product-name {
+    font-size: 16px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+
+  .product-card {
+    flex: 1 1 100%; /* 1 card per row */
+    max-width: 100%;
+  }
+}

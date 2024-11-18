@@ -1,0 +1,38 @@
+/* General resets */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  /* Layout container: Using flexbox */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full height of the viewport */
+    padding-top: 60px; /* Offset for the fixed header height */
+  }
+  
+  /* Fixed header style */
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer always at bottom */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Pushes footer to bottom if content is less */
+  }
+  
+  header, footer {
+    width: 100%;
+  }

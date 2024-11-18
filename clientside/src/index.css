@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #E0F7FA;
+  font-family: "Poppins", sans-serif;
+  /* overflow-y: auto; */
+  scroll-behavior: auto;
+}
+
+
+
+.navbar {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px gray;
+  --webkit-box-shadow: 0 8px 6px -6px gray;
+  border-bottom: solid gray !important;
+}
+
+.nav-link {
+  font-weight: 300 !important;
+}
+
+.active {
+  border-bottom: 2px solid black;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-family: "roboto", sans-serif;
+  letter-spacing: 3px;
+}
+
+.footer {
+  color: white;
+  padding: 25px;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.footer a:hover {
+  color: #ffefba;
+  border-bottom: 1px solid #ffefba;
+}
+
+.pnf {
+  display: flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pnf-title {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.pnf-heading {
+  font-weight: normal;
+}
+
+.pnf-btn {
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+.pnf-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.contactus {
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-link {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.btnn {
+  text-align: center;
+  padding: 7px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn1 {
+  background-color: #0ba6ff;
+}
+
+.btn1:hover {
+  background-color: #237fb7;
+}
+
+.btn2 {
+  background-color: #898989;
+}
+
+.btn2:hover {
+  background-color: #687079;
+}
+
+/* Fixed Header */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Keeps the header above other content */
+  background-color: #f8f9fa; /* Optional: set a background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+
+/* Add margin to the top of the main content so it's not hidden under the fixed header */
+.main-content {
+  padding-top: 60px; /* Adjust this based on the height of your header */
+}
+
+/* Optional: Add footer styling if needed */

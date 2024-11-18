@@ -1,0 +1,118 @@
+/* Header Styles */
+.header-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 20px;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Brand Logo */
+  .header-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .header-logo:hover {
+    color: #0056b3;
+  }
+  
+  .header-icon {
+    font-size: 1.8rem;
+    margin-right: 5px;
+    color: #007bff;
+  }
+  
+  /* Navbar Menu */
+  .header-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+  }
+  
+  .header-link {
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .header-link:hover {
+    color: #007bff;
+  }
+  
+  /* Dropdown */
+  .dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-item {
+    color: #333;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+  }
+  
+  /* Badge (Cart) */
+  .badge {
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  /* Search Input */
+  .search-input {
+    margin-right: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: start;
+    }
+  
+    .header-logo {
+      margin-bottom: 10px;
+    }
+  
+    .header-menu {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-item {
+      margin: 5px 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header-logo {
+      font-size: 1.3rem;
+    }
+  
+    .header-link {
+      font-size: 0.9rem;
+    }
+  }
+  
